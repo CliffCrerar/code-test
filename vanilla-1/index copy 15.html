@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vanilla</title>
+  <link rel="stylesheet" href="style0.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <!-- <link rel="stylesheet" href="style2.css" /> -->
+  <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>IKM TEST</h1>
+  </header>
+  <main>
+
+    <div style="height: 500px">test</div>
+
+    <div id="footer" style="position:absolute;height:100px;top:0;left:0;width:100%">
+      I'm the footer
+    </div>
+
+    <div style="height: 500px">test</div>
+    <script>
+      $(document).ready(function () {
+        place();
+        window.onresize = function () { place(); };
+        window.onscroll = function () { place(); };
+      })
+
+
+
+      //A.
+      // function place() {
+      //   document.getElementById('footer').style.top = window.scrollY;
+      // }
+
+      //B.
+      // function place() {
+      //   document.getElementById('footer').style.top = 0;
+      // }
+
+      // C.
+      // function place() {
+      //   document['footer'].style.top = document.body.scrollTop;
+      // }
+
+      //D.
+      // function place() {
+      //   document.getElementById('footer').top = document.documentElement.scrollTop;
+      // }
+
+      //E.
+      // function place() {
+      //   document.getElementById('footer').style.top = document.body.scrollTop;
+      // }
+
+    </script>
+
+
+
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    $('document').ready(function () {
+      console.log('Document Ready');
+    })
+  </script>
+
+  <!-- <script src="script0.js"></script> -->
+  <!-- <script src="script1.js"></script> -->
+  <!-- <script src="script2.js"></script> -->
+  <!-- <script src="script3.js"></script> -->
+</body>
+
+</html>

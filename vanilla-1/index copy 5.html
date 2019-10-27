@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla</title>
+    <link rel="stylesheet" href="style0.css" />
+    <link rel="stylesheet" href="style1.css" />
+    <!-- <link rel="stylesheet" href="style2.css" /> -->
+    <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>IKM TEST</h1>
+    </header>
+    <main>
+
+    </main>
+<footer>
+
+    <div id="test">
+        <p class="marked">Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p class="marked">Paragraph 4</p>
+        <p>Paragraph 5</p>
+        <p>Paragraph 6</p>
+    </div>
+    <script type="text/javascript">
+        (function($) {
+            $.expr[':'].marked = function (element) {
+                return $(element).hasClass('marked');
+            };
+        })(jQuery);
+        jQuery(document).ready(function() {
+            a = jQuery('p:marked').length;
+            console.log('a: ', a);
+            jQuery('.result').html(a);
+        });
+    </script>
+
+</footer>
+<script>
+  $('document').ready(function(){
+    console.log('Document Ready');
+
+    var persons = [
+      {name: 'Cliff', age: '35'},
+      {name: 'Spliff', age: '9'},
+      {name: 'Driff', age: '22'},
+      {name: 'Tiff', age: '14'},
+      {name: 'Giff', age: '4'}
+    ]
+
+    console.log(
+      // persons.sort()  
+    // persons.sort(function(a,b) { return b.age - a.age; }),
+	  // persons.sort(function(a,b) { return a > b; }),
+	  // persons.sort(function(a,b) { return a.age > b.age; }),
+	  persons.sort(function(a,b) { return a.age - b.age; })
+
+    )
+
+    var gg = 1.5;
+var hh = 0.2;
+var x = Math.round(gg%hh * 100) / 100;
+document.writeln(x);
+
+  })
+
+//   $(document).ready(function()
+// {
+//     $.fn.redText = function()
+//     {
+//         return this.each(function()
+//         {
+//             $(this).css("color", "red");
+//         });
+//     }
+
+//     $.fn.redText(document.getElementsByTagName('p'))
+// });
+
+</script>
+
+    <!-- <script src="script0.js"></script> -->
+    <!-- <script src="script1.js"></script> -->
+    <!-- <script src="script2.js"></script> -->
+    <!-- <script src="script3.js"></script> -->
+  </body>
+</html>

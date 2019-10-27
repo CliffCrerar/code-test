@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>This is a test</title>
+</head>
+<body>
+<ul>
+    <li><a rel="tab" href="#div1">Div 1</a></li>
+    <li><a rel="tab" href="#div2">Div 2</a></li>
+    <li><a rel="tab" href="#div3">Div 3</a></li>
+</ul>
+<div id="div1">I'm div 1</div>
+<div id="div2" style="display:none">I'm div 2</div>
+<div id="div3" style="display:none">I'm div 3</div>
+<script>
+    (function(){
+        var actdiv = "div1";
+        function loadDiv(href) {
+            var div = href.match(/#(.*)/);
+            div = (!div?"div1":div[1]);
+            if (div != actdiv) {
+                document.getElementById(actdiv).style.display = "none";
+                document.getElementById(div).style.display = "block";
+                actdiv = div;
+            }
+        }
+        loadDiv(window.location.href);
+        window.onhashchange = function() {
+          console.log('window on haschange');
+          loadDiv(window.location.href);};
+        var a = document.getElementsByTagName("a");
+        for (var i=0; i<a.length; i++) {
+            a[i].onclick = function(event) {
+                loadDiv(event.target.href);
+            }
+            return false;
+        }
+    })();
+</script>
+</body>
+</html>

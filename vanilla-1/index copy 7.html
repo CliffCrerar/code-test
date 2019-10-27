@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vanilla</title>
+  <link rel="stylesheet" href="style0.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <!-- <link rel="stylesheet" href="style2.css" /> -->
+  <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>IKM TEST</h1>
+  </header>
+  <main>
+
+      <select id="select1">
+          <option value="1" selected="selected">Option1</option>
+          <option value="2">Option2</option>
+          <option value="3">Option3</option>
+          <option value="4">Option4</option>
+      </select>
+      <select id="select2">
+          <option value="a" selected="selected">OptionA</option>
+          <option value="b">OptionB</option>
+          <option value="c">OptionC</option>
+          <option value="d">OptionD</option>
+      </select>
+      <div id="result">Nothing selected</div>
+      <script type="text/javascript">
+          jQuery(document).ready(function() {
+              jQuery('#select1').change(function() {
+                  jQuery('#result').html(jQuery('option:selected',this).text());
+              });
+          });
+      </script>
+
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    $('document').ready(function () {
+      console.log('Document Ready');
+    })
+  </script>
+
+  <!-- <script src="script0.js"></script> -->
+  <!-- <script src="script1.js"></script> -->
+  <!-- <script src="script2.js"></script> -->
+  <!-- <script src="script3.js"></script> -->
+</body>
+
+</html>

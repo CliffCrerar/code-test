@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vanilla</title>
+  <link rel="stylesheet" href="style0.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <!-- <link rel="stylesheet" href="style2.css" /> -->
+  <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>IKM TEST</h1>
+  </header>
+  <main>
+
+    <span>Fade</span>
+
+    <span>Fader</span>
+
+    <span>poes</span>
+
+
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    $('document').ready(function () {
+      console.log('Document Ready');
+
+
+
+      //A.
+      // $("div").fadeToggle("slow", function () {
+      //   $(this).fadeToggle("slow", this);
+      // });
+      //B.
+      // $("span").fadeOut().fadeIn();
+
+      //C.
+      // function fade(){
+      //   $(this).fadeToggle("slow", fade);
+      //   $(this).dequeue();
+      // }
+      // $("span").queue(fade);
+
+      // D.
+      // function fade()
+      // {
+      //   $(this).fadeToggle("slow", fade);
+      // }
+      // $("span").fadeOut("slow", fade);
+
+      //E.
+      // function fade()
+      // {
+      //   $(this).fadeToggle("slow", fade);
+      // }
+      // fade();
+
+      //   var data = [[1, 2, 3, [4, [5, 6, 14]]], [8, [9, 18, [11, [12]], 13]]];
+      //   function test(data, elem) {
+      //     if (typeof data == "number") {
+      //       return (!elem || data > elem) ? data : elem;
+      //     } else {
+      //       for (var i = 0; i < data.length; i++) {
+      //         elem = test(data[i], elem);
+      //       }
+      //       return elem;
+      //     }
+      //   }
+      //   var result = test(data);
+      //   console.log('data: ', data.length);
+      //   console.log('result: ', result);
+    })
+
+    function add(a, b) { return check(a) + check(b); }
+    add(3, 4); // must return 7
+    console.log('must return 7: ', add(3, 4));
+    add("3", 4); // must return 7
+    console.log('must return 7: ', add("3", 4));
+    add(new Date(), 4); // must return NaN
+    console.log('must return NaN: ', add(new Date(), 4));
+
+
+    // A.
+    // function check(p) {
+    //   if ((typeof p) == "number") return p;
+    //   else if ((typeof p) == "string") return parseInt(p);
+    //   else return NaN;
+    // }
+
+    // B.
+    // function check(p) {
+    //   if ((typeof p) == "object") return NaN;
+    //   else return p;
+    // }
+
+    // C.
+    // function check(p) {
+    //   return p;
+    // }
+
+    //D.
+    // function check(p) {
+    //   if (typeOf(p) == "number") return p;
+    //   else if (typeOf(p) == "string") return parseInt(p);
+    //   else return NaN;
+    // }
+
+    // E.
+    // function check(p) {
+    //   if (typeof p == "Number") return p;
+    //   else if ((typeof p) == "String") return parseInt(p);
+    //   else return NaN;
+    // }
+
+
+
+  </script>
+
+  <!-- <script src="script0.js"></script> -->
+  <!-- <script src="script1.js"></script> -->
+  <!-- <script src="script2.js"></script> -->
+  <!-- <script src="script3.js"></script> -->
+</body>
+
+</html>

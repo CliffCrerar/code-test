@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vanilla</title>
+  <link rel="stylesheet" href="style0.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <!-- <link rel="stylesheet" href="style2.css" /> -->
+  <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>IKM TEST</h1>
+  </header>
+  <main>
+
+    <style type="text/css">
+      .selected {
+        background-color: red;
+      }
+    </style>
+    <div id="test">
+      <div class="container">
+        <p class="toolbar"><input type="button" value="level1"></input>
+          <p class="line">level 1</p>
+          <p class="line">level 1</p>
+          <div class="container">
+            <p class="toolbar"><input type="button" value="level2"></input>
+              <p class="line">level 2</p>
+              <p class="line">level 2</p>
+              <div class="container">
+                <p class="toolbar"><input type="button" value="level3"></input>
+                  <p class="line">level 3</p>
+                  <p class="line">level 3</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        jQuery('#test').on('click', 'input:button', function () {
+          // a yes
+          // jQuery(this).parent().siblings('p.line').toggleClass('selected');
+          // b no
+          // jQuery('p.line', jQuery(this).closest('.container')).toggleClass('selected');
+          // c
+          // jQuery('p.line', jQuery('.container').has(this)).toggleClass('selected');
+          // d
+          // jQuery('p.line', '#test').toggleClass('selected');
+          // e
+          jQuery(this).closest('.container').children('p.line').toggleClass('selected');
+
+        });
+      });
+    </script>
+
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    $('document').ready(function () {
+      console.log('Document Ready');
+    })
+  </script>
+
+  <!-- <script src="script0.js"></script> -->
+  <!-- <script src="script1.js"></script> -->
+  <!-- <script src="script2.js"></script> -->
+  <!-- <script src="script3.js"></script> -->
+</body>
+
+</html>

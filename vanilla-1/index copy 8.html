@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vanilla</title>
+  <link rel="stylesheet" href="style0.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <!-- <link rel="stylesheet" href="style2.css" /> -->
+  <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>IKM TEST</h1>
+  </header>
+  <main>
+
+      <div id="counter1"></div>
+      <div id="counter2"></div>
+      <script>
+          (function() {
+              var count1 = sessionStorage.getItem("counter1");
+              var count2 = localStorage.getItem("counter2");
+              count1 = !count1?1:parseInt(count1)+1;
+              count2 = !count2?1:parseInt(count2)+1;
+              sessionStorage.setItem("counter1", count1);
+              localStorage.setItem("counter2", count2);
+              document.getElementById('counter1').innerHTML = "Counter 1 is " + count1;
+              document.getElementById('counter2').innerHTML = "Counter 2 is " + count2;
+          })();
+      </script>
+
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    $('document').ready(function () {
+      console.log('Document Ready');
+    })
+  </script>
+
+  <!-- <script src="script0.js"></script> -->
+  <!-- <script src="script1.js"></script> -->
+  <!-- <script src="script2.js"></script> -->
+  <!-- <script src="script3.js"></script> -->
+</body>
+
+</html>

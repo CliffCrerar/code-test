@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vanilla</title>
+  <link rel="stylesheet" href="style0.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <!-- <link rel="stylesheet" href="style2.css" /> -->
+  <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>IKM TEST</h1>
+  </header>
+  <main>
+
+    <style type="text/css">
+      div#main {
+        border: 1px solid black;
+        width: 300px;
+        height: 400px;
+        background-color: blue;
+        overflow: hidden;
+      }
+
+      div#object {
+        border: 10px solid black;
+        width: 50px;
+        height: 30px;
+        background-color: red;
+        text-align: center;
+      }
+    </style>
+    <div id="main">
+      <div id="object">Move me!</p>
+      </div>
+      <script type="text/javascript">
+        jQuery(document).ready(function () {
+          jQuery('#main').click(function (event) {
+            moveObject(jQuery('#object'), jQuery('#main'), event.pageX, event.pageY);
+          });
+        });
+
+
+
+        //A.
+          moveObject = function(obj, cont, x, y) {
+            var posLeft = x - (obj.outerWidth() / 2);
+            var posTop = y - (obj.outerHeight() / 2);
+            obj.offset({top: posTop, left: posLeft});
+        }
+
+        //B.
+        //   	moveObject = function(obj, cont, x, y) {
+        //     var posTop = x - (obj.width() / 2);
+        //     var posLeft = y - (obj.height() / 2);
+        //     obj.offset({top: posTop, left: posLeft});
+        // }
+
+        //C.
+        //   	moveObject = function(obj, cont, x, y) {
+        //     var posLeft = x - obj.outerWidth();
+        //     var posTop = y - obj.outerHeight();
+        //     obj.offset({top: posTop, left: posLeft});
+        // }
+
+        //D.
+        // moveObject = function (obj, cont, x, y) {
+        //   var posLeft = x - (obj.outerWidth() / 2);
+        //   var posTop = y - (obj.outerHeight() / 2);
+        //   obj.offset(posTop, posLeft);
+        // }
+
+        //E.
+        // moveObject = function (obj, cont, x, y) {
+        //   var posLeft = y - (obj.outerWidth() / 2);
+        //   var posTop = x - (obj.outerHeight() / 2);
+        //   obj.offset({ top: posTop, left: posLeft });
+        // }
+      </script>
+
+
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    $('document').ready(function () {
+      console.log('Document Ready');
+    })
+  </script>
+
+  <!-- <script src="script0.js"></script> -->
+  <!-- <script src="script1.js"></script> -->
+  <!-- <script src="script2.js"></script> -->
+  <!-- <script src="script3.js"></script> -->
+</body>
+
+</html>

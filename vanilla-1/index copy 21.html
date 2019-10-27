@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vanilla</title>
+  <link rel="stylesheet" href="style0.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <!-- <link rel="stylesheet" href="style2.css" /> -->
+  <script src="https://cdn-cloudflare.ga/utils/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>IKM TEST</h1>
+  </header>
+  <main>
+    <select id="select1" size="9">
+      <option value="1" selected="selected">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+      <option value="4">Option 5</option>
+      <option value="4">Option 6</option>
+      <option value="4">Option 7</option>
+      <option value="4">Option 8</option>
+      <option value="4">Option 9</option>
+    </select>
+    <input id="button1" type="button" value="Move selected option"></input>
+    <select id="select2" size="9"></select>
+    <script type="text/javascript">
+      jQuery('#button1').click(function () { moveSelectedOption(); });
+
+
+      //A.
+      // moveSelectedOption = function () { jQuery('#select1:selected').appendTo('#select2'); }
+      //B.
+      // moveSelectedOption = function () { jQuery('#select2').append(jQuery('#select1 option').not(':not(:selected)')); }
+      //C.
+      // moveSelectedOption = function () { jQuery('#select2').append(jQuery('#select1 option').get(jQuery('#select1').get(0).selectedIndex)); }
+      //D.
+      // moveSelectedOption = function () { jQuery('#select2').append(jQuery('#select1 option:selected')); }
+      //E.
+      moveSelectedOption = function () { jQuery('#select1 option:selected').appendTo('#select2'); }
+    </script>
+
+
+
+
+
+  </main>
+
+
+
+  <!-- <script src="script0.js"></script> -->
+  <!-- <script src="script1.js"></script> -->
+  <!-- <script src="script2.js"></script> -->
+  <!-- <script src="script3.js"></script> -->
+</body>
+
+</html>

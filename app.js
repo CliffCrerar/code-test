@@ -1,35 +1,37 @@
 console.log('-------------------------------');
-console.log('Code Test - IKM 27 Oct');
+console.log('Toptal Codility - 31 Oct');
 console.log('-------------------------------');
 
-const run = 'p2';
+const run = 'p1';
 
 const problems = {
     p1: function () {
+        console.log('problem 1');
 
     },
     p2: function () {
-
+        console.log('problem 2');
 
     },
     p3: function () {
-        console.log('problem 3')
+        console.log('problem 3');
 
     },
     p4: function () {
-        console.log('problem 4')
+        console.log('problem 4');
+     
 
     },
     p5: function () {
-        console.log('problem 5')
+        console.log('problem 5');
 
     },
     p6: function () {
-        console.log('problem 6')
+        console.log('problem 6');
 
     },
     p7: function () {
-        console.log('problem 7')
+        console.log('problem 7');
 
     }
 
